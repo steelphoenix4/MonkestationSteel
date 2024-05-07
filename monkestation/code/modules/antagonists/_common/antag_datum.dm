@@ -1,4 +1,6 @@
 /datum/antagonist
+	/// Allows antags to check exploitable info
+	antag_flags = FLAG_CAN_SEE_EXPOITABLE_INFO
 	///The list of keys that are valid to see our antag hud/of huds we can see
 	var/list/hud_keys
 
@@ -17,3 +19,11 @@
 		new_mob.mind.add_antag_datum(type)
 	else
 		hosts_mind.add_antag_datum(type)
+
+/datum/antagonist/proc/render_poll_preview()
+	RETURN_TYPE(/image)
+	if(preview_outfit)
+		var/icon/rendered_outfit = render_preview_outfit(preview_outfit)
+		if(rendered_outfit)
+			return image(rendered_outfit)
+	return image('icons/effects/effects.dmi', icon_state = "static", layer = FLOAT_LAYER)
