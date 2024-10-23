@@ -129,3 +129,15 @@ GLOBAL_LIST_INIT(store_plushies, generate_store_items(/datum/store_item/plushies
 	store_desc = "Eeble is Eeble"
 	item_path = /obj/item/toy/plush/Eeble
 	item_cost = 5000
+
+/datum/store_item/plushies/big_bad_wolf
+	name = "Big And Will Be Bad Wolf Plush"
+	store_desc = "A plushie depicting quite a not so bad and very much so marketable wolf plush."
+	item_path = /obj/item/toy/plush/lobotomy/big_bad_wolf
+	item_cost = 10000
+
+/datum/store_item/plushies/scorched
+	name = "Scorched Girl Plush"
+	store_desc = "A plushie depicting a burned girl with an eternally lit match."
+	item_path = /obj/item/toy/plush/lobotomy/scorched
+	item_cost = 10000
